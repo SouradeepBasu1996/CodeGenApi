@@ -17,7 +17,7 @@ async def generate_code(request: PromptRequest):
     """
     Calls the local Ollama instance running CodeLlama to generate code based on the given prompt.
     """
-    model_name = "codellama:7b"  # Ensure this model is available in Ollama
+    model_name = "llama3.2"  # Ensure this model is available in Ollama
     response = ollama.chat(
         model=model_name, messages=[{"role": "user", "content": request.prompt}]
     )
